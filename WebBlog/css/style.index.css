@@ -1,0 +1,19 @@
+/* CSS Document */
+
+.topbar {
+	height: 50px;
+	line-height: 50px;
+}
+
+.banner {
+	height: 350px;
+}
+
+.menu {
+	height: 40px;
+	line-height: 40px;
+}
+
+.description {
+	height: 300px;
+}
