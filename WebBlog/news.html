@@ -2,9 +2,126 @@
 <html>
 <head>
 <meta charset="utf-8">
-<title>Untitled Document</title>
+<title>News Page</title>
+<!-- boostrap -->
+<link href="bootstrap/css/bootstrap.min.css" rel="stylesheet">
+<!-- jquery -->
+<script src="js/jquery.min.js"></script>
+<script src="js/popper.min.js"></script>
+
+<!-- script -->
+<script src="bootstrap/js/bootstrap.min.js"></script>
+
+<!-- styles -->
+<link href="css/style.news.css" rel="stylesheet">
 </head>
 
-<body>
+<body class="container">
+<header> 
+  <div class="col-md-12 d-none d-sm-block">
+    <div class="row">
+      <div class="col-md-9 col-9">
+		<img src="images/logo.png" class="img-fluid">
+	  </div>
+      <div class="col-md-3 col-3">
+		<a href="#" class="btn float-right">Login</a>
+	  </div>
+    </div>
+  </div>
+  <!-- *** NAVBAR *** -->
+  <nav class="navbar sticky-top navbar-expand-sm bg-dark navbar-dark"> 
+	<a class="navbar-brand d-block d-sm-none" href="index.html"><img src="images/logo.png" class="img-fluid"></a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+	<span class="navbar-toggler-icon"></span> </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav mr-auto">
+        <li class="nav-item active"> <a class="nav-link" href="#">Home</a>
+		</li>
+		<li class="nav-item dropdown"> 
+			<a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> News </a>
+          <div class="dropdown-menu" aria-labelledby="navbarDropdown"> 
+			  <a class="dropdown-item" href="#">Action</a> 
+            <div class="dropdown-divider"></div>
+            <a class="dropdown-item" href="#">Something else here</a> 
+		  </div>
+        </li>
+		<li class="nav-item"> <a class="nav-link" href="contact.html">Contact</a> 
+		</li>
+        
+      </ul>
+    </div>
+  </nav>
+  <!-- *** NAVBAR END *** -->
+  <br>
+</header>
+<section>
+  <div class="container-fluid">
+    <div class="row content">
+      <div class="col-sm-8">
+        <h4><small>RECENT POSTS</small></h4>
+        <hr>
+        <h2>I Love Food</h2>
+        <h5><span class="glyphicon glyphicon-time"></span> Post by Jane Dane, Sep 27, 2015.</h5>
+        <h5><span class="label label-danger">Food</span> <span class="label label-primary">Ipsum</span></h5>
+        <br>
+        <p>Food is my passion. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+        <br>
+        <br>
+        <hr>
+        <h4>Leave a Comment:</h4>
+        <form role="form">
+          <div class="form-group">
+            <textarea class="form-control" rows="3" required></textarea>
+          </div>
+          <button type="submit" class="btn btn-success">Submit</button>
+        </form>
+        <br>
+      </div>
+      <div class="col-sm-4 sidenav">
+        <h4>John's Blog</h4>
+        <ul class="nav nav-pills nav-stacked">
+          <li class="active"><a href="#section1">Home</a></li>
+          <li><a href="#section2">Friends</a></li>
+          <li><a href="#section3">Family</a></li>
+          <li><a href="#section3">Photos</a></li>
+        </ul>
+        <br>
+        <div class="input-group">
+          <input type="text" class="form-control" placeholder="Search Blog..">
+          <span class="input-group-btn">
+          <button class="btn btn-default" type="button"> <span class="glyphicon glyphicon-search"></span> </button>
+          </span> </div>
+      </div>
+    </div>
+  </div>
+</section>
+<footer> 
+  <!-- *** COPYRIGHT *** -->
+  <div id="copyright">
+    <div class="container">
+      <div class="col-md-12 text-center"> © 2018 HoriPro Inc. All Rights Reserved. </div>
+    </div>
+  </div>
+  <!-- *** COPYRIGHT END *** -->
+	
+	<!-- *** SCROLL TO TOP BUTTON *** -->
+	<a href="#" id="scroll"><span></span></a>
+	<script>
+		$(document).ready(function(){ 
+			$(window).scroll(function(){ 
+				if ($(this).scrollTop() > 100) { 
+					$('#scroll').fadeIn(); 
+				} else { 
+					$('#scroll').fadeOut(); 
+				} 
+			}); 
+			$('#scroll').click(function(){ 
+				$("html, body").animate({ scrollTop: 0 }, 300); 
+				return false; 
+			}); 
+		});
+	</script>
+	<!-- *** SCROLL TO TOP BUTTON END *** -->
+</footer>
 </body>
 </html>
